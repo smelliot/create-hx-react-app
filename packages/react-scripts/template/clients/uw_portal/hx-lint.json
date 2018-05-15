@@ -1,0 +1,66 @@
+// This is the base eslint config for all hx projects. PLEASE DO NOT ALTER THIS WITHOUT TALKING TO AMRIT OR MJ"
+// ESLint's files allow comments so don't worry about any linter errors you are getting here
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "plugins": ["react", "jsx-a11y", "import"],
+  "rules": {
+    "linebreak-style": ["off"],
+    "max-len": ["off"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "props"
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "react/prop-types": ["off"],
+    "eqeqeq": ["error", "smart"],
+    "function-paren-newline": ["error", "consistent"],
+    "object-curly-newline": [
+      "error",
+      {
+        "consistent": true
+      }
+    ],
+    "no-mixed-operators": [
+      "error",
+      {
+        "groups": [
+          ["+", "-", "*", "/", "%", "**"],
+          ["&", "|", "^", "~", "<<", ">>", ">>>"],
+          ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
+          ["&&", "||"],
+          ["in", "instanceof"]
+        ],
+        "allowSamePrecedence": true
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": [
+      "error",
+      {
+        "components": ["Link"],
+        "specialLink": ["to"]
+      }
+    ],
+    "no-class-assign": ["off"],
+    "no-console": ["off"],
+    "import/prefer-default-export": ["off"],
+    "react/no-unused-prop-types": ["off"]
+  }
+}

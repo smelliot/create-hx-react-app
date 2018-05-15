@@ -1,0 +1,200 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit; }
+
+/* disable step */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0;
+  /* <-- Apparently some margins are still there even though it's hidden */ }
+
+.react-grid-Main {
+  outline: 0px !important; }
+
+.react-grid-Grid {
+  border: 0px !important;
+  border-width: 0px 1px 1px 1px !important;
+  border-color: #000d99 !important; }
+
+.react-grid-Header {
+  border-right: 1px solid #000d99 !important;
+  border-bottom: 1px solid #000d99 !important;
+  background: #ccd0ff !important; }
+
+.react-grid-HeaderCell {
+  color: #000d99 !important;
+  background: #ccd0ff !important;
+  border-color: #000d99 !important;
+  font-weight: normal !important;
+  padding: 5px !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  text-align: center !important; }
+
+.react-grid-HeaderCell:first-of-type {
+  border-left: 1px solid #000d99 !important;
+  text-align: center !important; }
+
+.react-grid-Canvas {
+  background-color: white !important;
+  text-align: right !important; }
+
+.react-grid-Cell {
+  background-color: white !important;
+  border-color: #000d99 !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important; }
+  .react-grid-Cell:hover {
+    background: #f2f2f2 !important; }
+
+.react-grid-Row:hover .react-grid-Cell,
+.react-grid-Row.row-context-menu .react-grid-Cell {
+  background-color: #f2f2f2 !important; }
+
+.react-grid-Cell:first-of-type {
+  border-left: 1px solid #000d99 !important;
+  text-align: center !important;
+  background-color: #ccd0ff !important; }
+  .react-grid-Cell:first-of-type:hover {
+    background-color: #bdc2ff !important; }
+
+.react-grid-Row:hover .react-grid-Cell:first-of-type,
+.react-grid-Row.row-context-menu .react-grid-Cell:first-of-type {
+  background-color: #bdc2ff !important; }
+
+.react-grid-Row:hover .react-grid-calc-Cell {
+  background-color: #ffe8bd !important; }
+
+.react-grid-Cell__value {
+  padding: 1px !important;
+  white-space: nowrap !important;
+  vertical-align: middle !important;
+  line-height: 33px !important;
+  font-weight: normal !important; }
+
+.react-grid-Cell--locked:last-of-type {
+  border-color: #000d99 !important; }
+
+.react-contextmenu {
+  background-color: white;
+  background-clip: padding-box;
+  border: 1px solid #000d99;
+  border-radius: 0.25rem;
+  color: #000433;
+  font-size: 16px;
+  margin: 2px 0 0;
+  min-width: 160px;
+  outline: none;
+  opacity: 0;
+  padding: 5px 0;
+  pointer-events: none;
+  text-align: left;
+  transition: opacity 250ms ease !important; }
+
+.react-contextmenu.react-contextmenu--visible {
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 9999; }
+
+.react-contextmenu-item {
+  background: 0 0;
+  border: 0;
+  color: #000433;
+  cursor: pointer;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 3px 20px;
+  text-align: inherit;
+  white-space: nowrap; }
+
+.react-contextmenu-item.react-contextmenu-item--active,
+.react-contextmenu-item.react-contextmenu-item--selected {
+  color: #996300;
+  background-color: #ffedcc;
+  border-color: #996300;
+  text-decoration: none; }
+
+.react-contextmenu-item.react-contextmenu-item--disabled,
+.react-contextmenu-item.react-contextmenu-item--disabled:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #878a8c; }
+
+.react-contextmenu-item--divider {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: inherit;
+  margin-bottom: 3px;
+  padding: 2px 0; }
+
+.react-contextmenu-item--divider:hover {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.15); }
+
+.react-contextmenu-item.react-contextmenu-submenu {
+  padding: 0; }
+
+.react-contextmenu-item.react-contextmenu-submenu
+> .react-contextmenu-item:after {
+  content: "▶";
+  display: inline-block;
+  position: absolute;
+  right: 7px; }
+
+.example-multiple-targets::after {
+  content: attr(data-count);
+  display: block; }
+
+/* HOT SETTINGS */
+/* Header colours and borders */
+.handsontable th {
+  background-color: #ccd0ff;
+  color: #000d99; }
+
+.handsontable td {
+  border-right: 1px solid #000d99;
+  border-bottom: 1px solid #000d99; }
+
+.handsontable th,
+.handsontable td {
+  border-right: 1px solid #000d99;
+  border-bottom: 1px solid #000d99; }
+
+.handsontable th:last-child {
+  /*Foundation framework fix*/
+  border-right: 1px solid #000d99;
+  border-bottom: 1px solid #000d99; }
+
+.handsontable th:first-child,
+.handsontable th:nth-child(2),
+.handsontable td:first-of-type,
+.handsontable .htNoFrame + th,
+.handsontable .htNoFrame + td {
+  border-left: 1px solid #000d99; }
+
+.handsontable.htRowHeaders thead tr th:nth-child(2) {
+  border-left: 1px solid #000d99; }
+
+.handsontable tr:first-child th,
+.handsontable tr:first-child td {
+  border-top: 1px solid #000d99; }
+
+.handsontable tbody tr th:nth-last-child(2) {
+  border-right: 1px solid #000d99; }
+
+.handsontable thead tr:nth-last-child(2) th.htGroupIndicatorContainer {
+  border-bottom: 1px solid #000d99; }
+
+.ht_clone_top_left_corner thead tr th:nth-last-child(2) {
+  border-right: 1px solid #000d99; }
+
+/* Read only cells */
+.handsontable .htDimmed {
+  color: #996300;
+  background: #ffedcc; }
